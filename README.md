@@ -1,81 +1,63 @@
-# Churn-Prediction-System
-End-to-end Customer Churn Prediction System using Python, Scikit-learn, Streamlit, and Power BI to identify high-risk customers and support retention strategies.
-
 # Customer Churn Prediction System
 
-## Overview
+An end-to-end customer-retention analysis using Python, scikit-learn,
+Streamlit, and Power BI. The project explores telecom customer behaviour,
+trains classification models, and provides a simple interface for evaluating
+churn risk.
 
-This project is an end-to-end Machine Learning solution designed to predict customer churn and help businesses identify customers who are likely to leave their services.
+## Business Problem
 
-The system analyzes customer behavior, contract details, tenure, and billing information to predict churn risk and support customer retention strategies.
+Customer churn reduces recurring revenue and increases acquisition costs. This
+project identifies patterns associated with churn so a retention team can
+prioritise customers who may need intervention.
 
----
+## Project Workflow
 
-## Problem Statement
-
-Customer churn directly impacts business revenue and growth. The objective of this project is to identify customers at risk of leaving and provide actionable insights through machine learning and interactive dashboards.
-
----
-
-## Features
-
-* Data Cleaning and Preprocessing
-* Exploratory Data Analysis (EDA)
-* Customer Churn Prediction using Machine Learning
-* Streamlit Web Application
-* Interactive Power BI Dashboard
-* Risk-Based Customer Segmentation
-
----
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Seaborn
-* Streamlit
-* Power BI
-
----
-
-## Machine Learning Models
-
-* Logistic Regression
-* Random Forest Classifier
-
----
+1. Clean and validate the Telco Customer Churn dataset.
+2. Explore customer tenure, contracts, charges, and churn behaviour.
+3. Prepare model-ready features.
+4. Compare classification models.
+5. Save the selected model for inference.
+6. Present a lightweight prediction interface with Streamlit.
 
 ## Results
 
-* Achieved approximately 82% prediction accuracy
-* Identified key churn drivers
-* Developed an interactive dashboard for business insights
+- Approximately 82% model accuracy was recorded during development.
+- The analysis investigates tenure, monthly charges, and contract type as
+  customer-risk indicators.
+- The Streamlit application converts model output into a clear churn/stay
+  result.
 
----
+Accuracy alone does not fully describe model quality. Precision, recall, and
+class balance should also be reviewed before using a churn model operationally.
 
-## Dashboard Insights
+## Repository Structure
 
-* Churn Rate Analysis
-* Contract Type Impact
-* Customer Risk Segmentation
-* Monthly Charges Analysis
-* Retention Strategy Recommendations
+| Path | Purpose |
+|---|---|
+| `Notebooks/churn_project.ipynb` | Cleaning, exploration, training, and evaluation |
+| `App/streamlit_app.py` | Interactive churn prediction interface |
+| `Models/churn_model.pkl` | Serialized trained model |
+| `Data/` | Raw and cleaned analysis datasets |
 
----
+## Run Locally
 
-## Future Improvements
+```bash
+pip install -r requirements.txt
+streamlit run App/streamlit_app.py
+```
 
-* XGBoost Integration
-* Hyperparameter Tuning
-* Model Deployment on Cloud
-* Automated Data Pipeline
+## Skills Demonstrated
 
----
+`Python` `Pandas` `scikit-learn` `Streamlit` `EDA` `Classification`
+`Customer Analytics`
+
+## Responsible Use
+
+This is a portfolio project built for learning and demonstration. A production
+retention decision should include model monitoring, fairness checks, current
+customer data, and human review.
 
 ## Author
 
-Adarsh Dubey
-Backend Developer | Python Enthusiast | Data Analytics Learner
+Adarsh Dubey - Data Analyst
