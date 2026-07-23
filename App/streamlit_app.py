@@ -1,9 +1,12 @@
 import streamlit as st
 import pickle
 import numpy as np
+from pathlib import Path
 
 # Load model
-model = pickle.load(open("../Models/churn_model.pkl", "rb"))
+MODEL_PATH = Path(__file__).resolve().parents[1] / "Models" / "churn_model.pkl"
+with MODEL_PATH.open("rb") as model_file:
+    model = pickle.load(model_file)
 
 st.title("📊 Customer Churn Prediction System")
 
