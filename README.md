@@ -18,11 +18,12 @@ prioritise customers who may need intervention.
 3. Prepare model-ready features.
 4. Compare classification models.
 5. Save the selected model for inference.
-6. Present a lightweight prediction interface with Streamlit.
+6. Present all nineteen model inputs in a Streamlit interface.
 
 ## Results
 
-- Approximately 82% model accuracy was recorded during development.
+- Approximately 80% test accuracy was recorded with the reproducible training
+  script.
 - The analysis investigates tenure, monthly charges, and contract type as
   customer-risk indicators.
 - The Streamlit application converts model output into a clear churn/stay
@@ -39,11 +40,13 @@ class balance should also be reviewed before using a churn model operationally.
 | `App/streamlit_app.py` | Interactive churn prediction interface |
 | `Models/churn_model.pkl` | Serialized trained model |
 | `Data/` | Raw and cleaned analysis datasets |
+| `train_model.py` | Reproducible model-training entry point |
 
 ## Run Locally
 
 ```bash
 pip install -r requirements.txt
+python train_model.py
 streamlit run App/streamlit_app.py
 ```
 
